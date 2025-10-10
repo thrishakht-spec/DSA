@@ -2,9 +2,9 @@
 #include <stdlib.h>
 int GCD(int a,int b)
 {
-    if(a=0)
-        return b;
-    return GCD(b%a,a);
+    if(a==b) return a;
+    else if(a>b) return GCD(a-b,a);
+    return GCD(b,a);
 }
 int main()
 {
@@ -14,3 +14,4 @@ int main()
     printf("\nGCD of %d and %d is %d",a,b,GCD(a,b));
     return 0;
 }
+
